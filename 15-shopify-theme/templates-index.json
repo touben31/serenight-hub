@@ -1,0 +1,327 @@
+{
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "show_announcement": true,
+        "announcement_text": "🌙 OEKO-TEX Standard 100 · Livraison offerte France · 30 nuits d'essai · Retour prépayé offert",
+        "link": "/pages/retours-et-remboursements"
+      }
+    },
+    "hero-banner": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "image_height": "large",
+        "full_width": true,
+        "heading": "Le seul système qui vous garantit le bon poids dès la première commande.",
+        "heading_size": "h1",
+        "subheading": "Quiz personnalisé · Poids certifié OEKO-TEX · Échange offert si erreur de poids.",
+        "button_label": "Trouver mon poids parfait — Gratuit",
+        "button_link": "/pages/quiz-trouver-mon-poids-parfait",
+        "button_style_secondary": false,
+        "second_button_label": "Voir les couvertures",
+        "second_button_link": "/collections/couvertures-lestees",
+        "second_button_style_secondary": true,
+        "text_alignment": "center",
+        "overlay_opacity": 20
+      }
+    },
+    "trust-bar": {
+      "type": "multicolumn",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 28
+      },
+      "blocks": {
+        "trust-1": {
+          "type": "column",
+          "settings": {
+            "title": "OEKO-TEX Standard 100",
+            "text": "Certification vérifiable en ligne sur oeko-tex.com avec votre QR code",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust-2": {
+          "type": "column",
+          "settings": {
+            "title": "30 nuits d'essai",
+            "text": "Satisfait ou remboursé intégral — sans justification requise",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust-3": {
+          "type": "column",
+          "settings": {
+            "title": "Retour prépayé offert",
+            "text": "Étiquette envoyée sous 24h ouvrées — frais pris en charge",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust-4": {
+          "type": "column",
+          "settings": {
+            "title": "Livraison offerte France",
+            "text": "Sans minimum d'achat · 24-48h ouvrées après expédition",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["trust-1", "trust-2", "trust-3", "trust-4"]
+    },
+    "quiz-cta": {
+      "type": "rich-text",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "content_alignment": "center",
+        "heading": "Quelle couverture est faite pour vous ?",
+        "heading_size": "h2",
+        "text": "<p>Le mauvais poids est la cause n°1 des retours sur le marché. Notre quiz vous guide en 30 secondes pour trouver le poids idéal selon votre morphologie et vos habitudes de sommeil.</p>",
+        "button_label": "Commencer le quiz — 30 secondes",
+        "button_link": "/pages/quiz-trouver-mon-poids-parfait",
+        "button_style_secondary": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "featured-products": {
+      "type": "featured-collection",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "title": "Nos couvertures lestées",
+        "heading_size": "h2",
+        "description": "Bambou OEKO-TEX Standard 100 · Billes de verre 2mm silencieuses · Garantie 30 nuits",
+        "show_description": true,
+        "collection": "couvertures-lestees",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_buy": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "how-it-works": {
+      "type": "multicolumn",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "Le Système du Poids Parfait™",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "step-1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Quiz 30 secondes",
+            "text": "Répondez à 3 questions sur votre poids, vos habitudes de sommeil et votre sensibilité thermique. Notre système calcule le poids idéal pour vous.",
+            "link_label": "Faire le quiz →",
+            "link": "/pages/quiz-trouver-mon-poids-parfait"
+          }
+        },
+        "step-2": {
+          "type": "column",
+          "settings": {
+            "title": "2. Livraison en 48h",
+            "text": "Votre couverture lestée certifiée OEKO-TEX est expédiée sous 2 jours ouvrés. Livraison offerte en France métropolitaine.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step-3": {
+          "type": "column",
+          "settings": {
+            "title": "3. Échange offert si erreur",
+            "text": "Le poids ne convient pas ? On échange gratuitement — retour prépayé, sans justification, sans délai. Zéro risque.",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"]
+    },
+    "objections": {
+      "type": "multicolumn",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Vos questions · Nos réponses directes",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "shadow",
+        "button_label": "",
+        "button_link": "",
+        "full_width": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "obj-1": {
+          "type": "column",
+          "settings": {
+            "title": "« 109€ c'est cher pour une couverture ? »",
+            "text": "Ramenée à 5 ans de durée de vie, la Classic 8kg coûte moins de 2€ par semaine. Et si elle ne vous convient pas : remboursement intégral.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "obj-2": {
+          "type": "column",
+          "settings": {
+            "title": "« Et si je choisis le mauvais poids ? »",
+            "text": "C'est pour ça qu'on a créé le quiz. Et si malgré tout ce n'est pas le bon poids — on échange gratuitement. Zéro risque.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "obj-3": {
+          "type": "column",
+          "settings": {
+            "title": "« Je ne suis pas sûr que ça marche. »",
+            "text": "Vous avez 30 nuits pour tester dans vos vraies conditions. Remboursement intégral + retour prépayé offert si insatisfait.",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["obj-1", "obj-2", "obj-3"]
+    },
+    "garantie": {
+      "type": "rich-text",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "content_alignment": "center",
+        "heading": "Notre engagement — Zéro risque.",
+        "heading_size": "h2",
+        "text": "<p><strong>30 nuits d'essai satisfait ou remboursé</strong> · Retour prépayé offert · Échange de poids 1× gratuit · Garantie coutures 5 ans</p><p style=\"margin-top: 12px; opacity: 0.75;\">« Le poids du calme. » — ou on vous rembourse.</p>",
+        "button_label": "Commander avec garantie 30 nuits",
+        "button_link": "/collections/couvertures-lestees",
+        "button_style_secondary": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "faq-section": {
+      "type": "collapsible-content",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Questions fréquentes",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container": "section",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "button_label": "Voir toutes les questions",
+        "button_link": "/pages/faq-1",
+        "full_width": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "faq-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Quel poids de couverture choisir ?",
+            "row_content": "<p>La couverture idéale représente 8 à 10% de votre poids corporel. Essential 6kg → 50-70 kg · Classic 8kg → 60-90 kg · Premium 10kg → 80-110 kg. Utilisez notre quiz gratuit pour une recommandation personnalisée.</p>",
+            "page": ""
+          }
+        },
+        "faq-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "La couverture est-elle bruyante la nuit ?",
+            "row_content": "<p>Non. Nos billes de verre 2mm sont entièrement insonores, contrairement aux billes de polypropylène plastique utilisées dans les produits d'entrée de gamme. Vous pouvez vous retourner librement sans aucun bruit.</p>",
+            "page": ""
+          }
+        },
+        "faq-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Comment laver la couverture ?",
+            "row_content": "<p>Housse amovible : machine à 30°C, cycle délicat, sèche-linge basse température. Machine recommandée ≥ 7kg de capacité. La partie lestée peut également être lavée en machine (cycle délicat, 30°C).</p>",
+            "page": ""
+          }
+        },
+        "faq-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Comment vérifier la certification OEKO-TEX ?",
+            "row_content": "<p>Chaque couverture Serenight porte un QR code sur son étiquette. Scannez-le pour accéder directement au certificat officiel sur oeko-tex.com.</p>",
+            "page": ""
+          }
+        },
+        "faq-5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Puis-je échanger de poids si je me trompe ?",
+            "row_content": "<p>Oui. Le premier échange de poids est offert — frais de retour et de réexpédition pris en charge par Serenight. Contactez-nous à contact@serenight.fr.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["faq-1", "faq-2", "faq-3", "faq-4", "faq-5"]
+    },
+    "footer-cta": {
+      "type": "rich-text",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "content_alignment": "center",
+        "heading": "Prêt à mieux dormir ?",
+        "heading_size": "h2",
+        "text": "<p>Commencez par le quiz — 30 secondes pour trouver votre poids parfait.</p>",
+        "button_label": "Trouver mon poids parfait — Gratuit",
+        "button_link": "/pages/quiz-trouver-mon-poids-parfait",
+        "button_style_secondary": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "hero-banner",
+    "trust-bar",
+    "quiz-cta",
+    "featured-products",
+    "how-it-works",
+    "objections",
+    "garantie",
+    "faq-section",
+    "footer-cta"
+  ]
+}
