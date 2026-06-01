@@ -1,81 +1,76 @@
 # 🏪 CONFIGURATION BOUTIQUE SHOPIFY — SERENIGHT
-> Store : fytuq3-i0.myshopify.com
-> Plan : Basic · Devise : EUR · Fuseau : CEST · France
+> Store : fytuq3-i0.myshopify.com · Plan : Basic · EUR · France
+> Mis à jour : 01 Juin 2026
 
 ---
 
-## IDs PRODUITS (NE PAS MODIFIER)
+## IDs PRODUITS
 
-| Produit | GID Shopify | SKU | Prix |
-|---------|------------|-----|------|
-| Classic 8kg | gid://shopify/Product/16333388218713 | SRN-CLS-8KG | 109€ |
-| Essential 6kg | gid://shopify/Product/16333388480857 | SRN-ESS-6KG | 79€ |
-| Premium 10kg | gid://shopify/Product/16333388972377 | SRN-PRE-10KG | 129€ |
+| Produit | GID | SKU | Prix | Statut |
+|---------|-----|-----|------|--------|
+| Classic 8kg | gid://shopify/Product/16333388218713 | SRN-CLS-8KG | 109€ | ✅ ACTIF |
+| Essential 6kg | gid://shopify/Product/16333388480857 | SRN-ESS-6KG | 79€ | ✅ ACTIF |
+| Premium 10kg | gid://shopify/Product/16333388972377 | SRN-PRE-10KG | 129€ | ✅ ACTIF |
 
 ## IDs COLLECTIONS
 
-| Collection | GID Shopify | Produits |
-|-----------|------------|---------|
-| Couvertures Lestées | gid://shopify/Collection/702728700249 | 3 |
-| Meilleures Ventes | gid://shopify/Collection/702728765785 | 1 (Classic 8kg) |
+| Collection | GID | Produits | Statut |
+|-----------|-----|---------|--------|
+| Couvertures Lestées | gid://shopify/Collection/702728700249 | 3 | ✅ |
+| Meilleures Ventes | gid://shopify/Collection/702728765785 | 1 | ✅ |
 
 ## PAGES CRÉÉES
 
-| Page | Handle | Statut |
-|------|--------|--------|
-| Conditions Générales de Vente | /pages/conditions-generales-de-vente | ✅ Publiée |
-| Retours et Remboursements | /pages/retours-et-remboursements | ✅ Publiée |
-| Mentions Légales | /pages/mentions-legales | ✅ Publiée |
-| Politique de Confidentialité | /pages/politique-de-confidentialite | ✅ Publiée |
+| Page | Handle | GID | Statut |
+|------|--------|-----|--------|
+| CGV | /pages/conditions-generales-de-vente | gid://shopify/Page/717119979865 | ✅ |
+| Retours | /pages/retours-et-remboursements | gid://shopify/Page/717120438617 | ✅ |
+| Mentions Légales | /pages/mentions-legales | gid://shopify/Page/717120471385 | ✅ |
+| Confidentialité | /pages/politique-de-confidentialite | gid://shopify/Page/717120504153 | ✅ |
+| Quiz | /pages/quiz | gid://shopify/Page/717127483737 | ✅ |
+| FAQ | /pages/faq | gid://shopify/Page/717127516505 | ✅ |
+| Contact | /pages/contact | gid://shopify/Page/715652432217 | ✅ (par défaut) |
+
+## MENUS
+
+| Menu | Handle | GID |
+|------|--------|-----|
+| Menu principal | main-menu-1 | gid://shopify/Menu/343026467161 |
+| Footer — Légal | footer-legal | gid://shopify/Menu/343026499929 |
+| Footer — Service Client | footer-service | gid://shopify/Menu/343026532697 |
 
 ---
 
-## ACTIONS MANUELLES RESTANTES
+## RESTE À FAIRE MANUELLEMENT
 
 ```
-[ ] Renommer boutique → "Serenight"
-    Paramètres → Général → Nom de la boutique
+[ ] 1. Renommer boutique → "Serenight"
+    Paramètres → Général → Nom de la boutique → Serenight → Enregistrer
 
-[ ] Activer les 3 produits (Brouillon → Actif)
-    Produits → chaque produit → Statut → Actif → Enregistrer
+[ ] 2. Livraison France offerte (0€)
+    Paramètres → Expédition → Profil général
+    → Zone France → Modifier tarif → 0,00€ → Enregistrer
 
-[ ] Livraison offerte France
-    Paramètres → Expédition → France métropolitaine → 0,00€
+[ ] 3. Désactiver le mot de passe boutique
+    Boutique en ligne → Préférences → Protection par mot de passe → OFF
 
-[ ] Shopify Payments
+[ ] 4. Shopify Payments (requiert SIRET)
     Paramètres → Paiements → Shopify Payments → Activer
-    Requis : SIRET + RIB
 
-[ ] Klarna 3× sans frais
-    Paramètres → Paiements → Klarna → Activer
+[ ] 5. Configurer thème Dawn
+    Boutique en ligne → Thèmes → Personnaliser
+    Couleurs : fond #F0F4FF · accents #0D1B3E · boutons #0D1B3E
+    Police : DM Sans
 
-[ ] Axeptio (cookies CNIL)
-    App Store → Axeptio → Connecter GA4 + Google Ads
+[ ] 6. Installer apps (App Store)
+    → Google & YouTube (officielle)
+    → Klaviyo
+    → Judge.me Reviews
+    → Axeptio (cookies CNIL)
+    → Microsoft Clarity
 
-[ ] Klaviyo (email)
-    App Store → Klaviyo → Connecter
-
-[ ] Judge.me (avis)
-    App Store → Judge.me → Plan gratuit
-
-[ ] Connecter domaine serenight.fr
-    Paramètres → Domaines → Connecter un domaine existant
-
-[ ] Photos produits
-    Après réception échantillons → fond blanc → upload dans chaque fiche
-
-[ ] Quiz page
-    Pages → Ajouter → coller HTML depuis 04-boutique-shopify/quiz-serenight.md
-```
-
----
-
-## THÈME DAWN — COULEURS
-
-```
-Couleur principale (fond) : #F0F4FF
-Couleur accent : #0D1B3E
-Boutons : #0D1B3E (texte blanc)
-Liens : #3B6FB5
-Typographie : DM Sans (Google Fonts)
+[ ] 7. Créer comptes réseaux sociaux
+    → Instagram @serenight.fr
+    → TikTok @serenight.fr
+    → Facebook "Serenight France"
 ```
