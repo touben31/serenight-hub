@@ -1,6 +1,16 @@
 # 📦 Catalogue Produits — Serenight (10 SKUs de lancement)
 
 > Stratégie de lancement : commencer avec 3 SKUs (Classic 8kg + Essential 6kg + Kids 4kg)  
+
+> ⚠️ **Note de cohérence (corrigé — Juin 2026) :**
+> Les coûts et marges de ce tableau sont les **hypothèses initiales** (avant validation fournisseur).
+> Valeurs corrigées après audit critique :
+> - **Coût achat Classic 8kg :** 21-24€ (pas 19€) — surcoût OEKO-TEX qualité
+> - **Livraison France :** 8€ Mondial Relay pro (pas 5,50€)
+> - **Marge nette réelle :** 56-63% (pas 72-76%) — après retours 10%, Stripe 1,6%, apps
+>
+> Référence : `07-financier/simulation-financiere.md` pour les projections opérationnelles.
+
 > Stock initial recommandé : 15 pcs × 3 SKUs = 45 pcs — Budget achat : ~840€
 
 ---
