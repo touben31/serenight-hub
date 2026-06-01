@@ -6,7 +6,7 @@ Le mécanisme unique de Serenight est le **Protocole DPT-Pro™** — une combin
 
 | Élément | Science | Application Serenight | Bénéfice |
 |---------|---------|----------------------|----------|
-| **D** — Deep Pressure | Pression profonde (DPT) active le système nerveux parasympathique, réduit le cortisol de 18% | Billes de verre 2mm, répartition homogène 1kg/dm² | Endormissement plus rapide |
+| **D** — Deep Pressure | Pression profonde (DPT) conçue pour favoriser l'activation du système nerveux parasympathique et contribuer à réduire les tensions physiques liées au stress | Billes de verre 2mm, répartition homogène 1kg/dm² | Endormissement plus rapide |
 | **P** — Poids Personnalisé | Poids idéal = 7-10% du poids corporel | Quiz + recommandation personnalisée | Aucun risque de mauvais choix |
 | **T** — Thermorégulation | Température corporelle doit descendre de 0,5° pour induire le sommeil profond | Bambou thermorégulant OEKO-TEX | Plus de sueurs, plus de réveils |
 
@@ -14,7 +14,7 @@ Le mécanisme unique de Serenight est le **Protocole DPT-Pro™** — une combin
 
 ## Promesse reformulée
 
-> Le Protocole DPT-Pro™ de Serenight combine pression profonde, poids personnalisé et thermorégulation bambou pour vous faire dormir profondément dès la première nuit — prouvé par la science, garanti 30 nuits.
+> Le Protocole DPT-Pro™ de Serenight combine pression profonde, poids personnalisé et thermorégulation bambou — inspiré des principes de la Deep Pressure Therapy, garanti 30 nuits.
 
 ---
 
@@ -22,8 +22,8 @@ Le mécanisme unique de Serenight est le **Protocole DPT-Pro™** — une combin
 
 | Affirmation | Source | Formulation client |
 |-------------|--------|--------------------|
-| La pression profonde réduit le cortisol | Temple University, 2021 | "Réduit le stress physiologique de 18%" |
-| 81% améliorent leur sommeil | Étude Mullen et al., Journal of Sleep Medicine | "81% de nos clients dorment mieux dès 7 jours" |
+| Des études sur la pression profonde montrent un effet sur les marqueurs de stress | Temple University, 2021 | "Conçue pour favoriser la relaxation physique et mentale" |
+| Des études montrent une amélioration du sommeil chez une majorité des utilisateurs | Journal of Sleep Medicine | "La majorité de nos clients rapportent une amélioration de leur confort nocturne" |
 | Bambou régule la température | Propriétés thermiques fibres naturelles | "Garde 3° de moins que le coton" |
 | OEKO-TEX = 0 substance nocive | Certification internationale | "Vérifiable sur oeko-tex.com" |
 
@@ -74,7 +74,7 @@ Le mécanisme unique de Serenight est le **Protocole DPT-Pro™** — une combin
 
 | Mots du problème | Mots de la solution | Mots d'autorité |
 |-----------------|---------------------|-----------------|
-| insomnies, se réveiller la nuit | dormir profondément | étude clinique, prouvé |
+| difficultés d'endormissement, nuits agitées | nuits plus sereines, repos amélioré | inspiré de la recherche, garanti 30 nuits |
 | fatiguée, épuisée, crevée | se sentir reposée, énergique | certifié OEKO-TEX |
 | anxiété, stress, tête qui tourne | calme, sérénité | 86% des utilisateurs |
 | somnifères, médicaments | naturel, sans produit chimique | thérapie par pression profonde |
