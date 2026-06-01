@@ -1,106 +1,119 @@
-# 🌙 Serenight — Hub Stratégique & Opérationnel
-
-> **"Le poids du calme."**
-> Marque D2C · Couverture lestée · Deep Pressure Therapy · France
-> Méthode Ecom Durability by Yass Fox · Juin 2026
-
----
-
-## 🚦 Statut du projet
-
-| Phase | Statut | Fichier clé |
-|-------|--------|------------|
-| ✅ Recherche niche | TERMINÉ | `13-niches/comparatif-10-boutiques.md` |
-| ✅ Identité de marque | TERMINÉ | `02-marque/` |
-| ✅ Catalogue & sourcing | TERMINÉ | `03-produits/` |
-| ✅ Audit stratégique (7 modules) | TERMINÉ | `09-audit/` |
-| ⏳ Corrections contradictions | TERMINÉ | Voir notes ⚠️ dans fichiers |
-| 🔴 Pages légales (textes) | À FAIRE | `08-legal/` |
-| 🔴 Fiches produits Shopify | À FAIRE | `04-boutique-shopify/` |
-| 🔴 Quiz interactif | À FAIRE | — |
-| 🔴 Photos produit | À FAIRE | Après réception échantillons |
-| 🔴 Commande échantillons | À FAIRE | `03-produits/sourcing-fournisseurs.md` |
-| 🔴 Ouverture Shopify | À FAIRE | `12-avancement/plan-30-jours.md` |
-| 🔴 Configuration GMC | À FAIRE | `09-audit/module7-audit-gmc-google-ads.md` |
+# 🌙 SERENIGHT — HUB OPÉRATIONNEL
+> Couverture lestée premium D2C · France · Bambou OEKO-TEX
+> Boutique : fytuq3-i0.myshopify.com · Plan Basic
+> Dernière mise à jour : 01 Juin 2026
 
 ---
 
-## 📁 Structure complète
+## ÉTAT DU PROJET
 
 ```
-serenight-hub/
-├── 01-strategie/         → Méthode Yass Fox, 3 stratégies
-├── 02-marque/            → Identité, Protocole DPT-Pro™, Avatar Sophie
-├── 03-produits/          → Catalogue 10 SKUs ⚠️, Sourcing 5 fournisseurs
-├── 04-boutique-shopify/  → Architecture Shopify, homepage, collections
-├── 05-google-ads/        → Campagnes, mots-clés, copy ⚠️
-├── 06-email-klaviyo/     → 6 flows complets
-├── 07-financier/         → Simulations réalistes (SOURCE DE VÉRITÉ)
-├── 08-legal/             → Cadre juridique, RGPD, INPI
-├── 09-audit/             → 7 modules stratégiques complets
-├── 10-kpis-pilotage/     → Tableau de bord, KPIs par phase
-├── 11-contenu-seo/       → Calendrier 12 articles, Pinterest
-├── 12-avancement/        → Plan 30 jours jour par jour ✅ checklist
-└── 13-niches/            → Comparatif 10 boutiques Ecom Durability
+Phase actuelle : CONSTRUCTION BOUTIQUE
+Première vente estimée : J+15 à J+35
+Capital dépensé : 0€ / 3 000€ disponibles
 ```
 
-> ⚠️ Les fichiers marqués contiennent des notes de cohérence — lire les bandeaux en tête de fichier.
+| Bloc | Avancement | Bloqué par |
+|------|-----------|------------|
+| 0 — Légal/Admin | 0% | À faire en urgence |
+| 1 — Fournisseurs | 0% | Peut commencer maintenant |
+| 2 — Shopify | 35% | SIRET pour Payments |
+| 3 — Photos | 0% | Attend échantillons |
+| 4 — GMC | 0% | Attend domaine |
+| 5 — Google Ads | 0% | Attend GMC |
+| 6 — Klaviyo | 0% | Peut commencer |
+| 7 — Réseaux | 0% | Peut commencer |
 
 ---
 
-## 🔍 09-audit — 7 Modules Stratégiques
+## STRUCTURE DU DÉPÔT (39 fichiers)
 
-| Module | Fichier | Contenu |
-|--------|---------|---------|
-| M1 | `module1-audit-destruction-complet.md` | Top 10 risques · Probabilités · Impacts · Parades |
-| M2 | `module2-premortem.md` | Serenight a échoué dans 3 ans — toutes les causes |
-| M3 | `module3-analyse-leaders.md` | Gravity · Bearaby · Baloo · Luna · Dormeur |
-| M4 | `module4-moat.md` | SEO · Email · Communauté · Contenu · Fidélisation |
-| M5 | `module5-audit-demande-reelle.md` | Demande réelle · Saisonnalité · Reddit · TikTok |
-| M6 | `module6-offre-irresistible.md` | 4 offres · PVU · Repositionnement Quiz |
-| M7 | `module7-audit-gmc-google-ads.md` | Règles GMC · Checklist 100% · Termes interdits |
+```
+📁 01-strategie/
+   └── methode-yass-fox.md               ← Méthode Ecom Durability complète
+
+📁 02-marque/
+   ├── identite-serenight.md             ← Marque, couleurs, ton, slogan
+   └── mecanisme-avatar.md               ← Système du Poids Parfait™
+
+📁 03-produits/
+   ├── catalogue-lancement.md            ← 3 SKUs : 6/8/10kg
+   ├── sourcing-fournisseurs.md          ← 10 fournisseurs Alibaba validés
+   └── procedures-fournisseur.md         ← Messages prêts + grille validation
+
+📁 04-boutique-shopify/
+   ├── structure-shopify.md              ← Architecture boutique
+   ├── fiches-produits-finales.md        ← HTML prêt à coller Shopify
+   ├── homepage-finale.md                ← 10 sections copy complet
+   ├── quiz-serenight.md                 ← Logique + HTML natif
+   ├── navigation-footer-config.md       ← Nav, footer, Dawn config ← NOUVEAU
+   └── shopify-store-config.md           ← IDs produits/collections Shopify
+
+📁 05-google-ads/
+   └── structure-campagnes.md            ← Campagnes Shopping + Search
+
+📁 06-email-klaviyo/
+   ├── flows-complets.md                 ← Structure 6 flows
+   └── klaviyo-email-copy.md             ← Copy complet emails ← NOUVEAU
+
+📁 07-financier/
+   ├── simulation-financiere.md          ← Modèle P&L
+   ├── audit-donnees-operationnelles-reelles.md
+   ├── audit-final-rentabilite.md        ← Marge nette réelle par scénario
+   └── serenight-margin-model.jsx        ← Dashboard financier interactif
+
+📁 08-legal/
+   ├── conformite-complete.md
+   └── pages-legales-completes.md        ← CGV, ML, Retours, RGPD prêts
+
+📁 09-audit/ (7 modules)
+   ├── module1 à module7                 ← Audit destruction, MOAT, offre...
+   └── audit-destruction.md
+
+📁 10-kpis-pilotage/
+   ├── tableau-de-bord.md
+   └── serenight-dashboard.html          ← Dashboard financier téléchargeable
+
+📁 11-contenu-seo/
+   └── strategie-contenu.md
+
+📁 12-avancement/
+   ├── checklist-gmc-google-ads.md       ← 30 pts GMC + 20 pts Ads
+   ├── checklist-operationnelle-lancement.md
+   ├── audit-domaines-fournisseurs.md
+   └── plan-30-jours.md
+
+📁 13-niches/
+   └── comparatif-10-boutiques.md
+
+📄 EXECUTION.md                          ← DOCUMENT DE PILOTAGE UNIQUE ⭐
+📄 PROMPTS-PRODUIT-RENTABLE.md          ← 34 prompts pour prochain produit
+📄 README.md                             ← Ce fichier
+```
 
 ---
 
-## ⚡ Données clés (valeurs réelles — source : 07-financier)
+## PROCHAINES ACTIONS IMMÉDIATES
 
-| Indicateur | Valeur réelle |
-|------------|--------------|
-| Prix Classic 8kg | 89€ (V1) → 109€ (V2) |
-| Coût achat + livraison | 21-24€ + 8€ = **29-32€/commande** |
-| Marge nette réelle | **56-63%** |
-| CPC Google M1 (réel) | **0,65-0,75€** (pas 0,36€ Semrush) |
-| Volume recherche FR | 27 100/mois "couverture lestée" |
-| Saisonnalité | Pic Déc (100) · Creux Juil (33) · Lancement idéal : **Août** |
-| Capital minimum | **3 000€ disponibles** avant de commencer |
-| Point mort | Mois 2-3 avec 50€/j Ads |
+**AUJOURD'HUI — Sans dépense :**
+1. Envoyer messages fournisseurs Alibaba (`03-produits/procedures-fournisseur.md`)
+2. Créer comptes réseaux sociaux @serenight.fr
+3. Vérifier INPI + EUIPO "serenight" (data.inpi.fr)
 
----
+**CETTE SEMAINE :**
+4. Créer micro-entreprise (urssaf.fr — gratuit, 3-10j pour SIRET)
+5. Acheter domaines serenight.com + serenight.fr (ovh.com — 17€)
+6. Renommer boutique Shopify → "Serenight"
+7. Activer les 3 produits Shopify (DRAFT → ACTIF)
+8. Configurer livraison offerte (0€)
+9. Créer compte Klaviyo + configurer flows
 
-## 🎯 Vrai avantage concurrentiel (Module 6 — Repositionnement)
-
-> **Le produit n'est pas la couverture. Le produit est le Système de Garantie du Poids Parfait™.**
->
-> Quiz (30s) → Poids garanti → Échange offert si erreur
-> Résout 35% des retours du marché. Impossible à copier en 2 semaines.
-> **Nouvelle PVU :** *"Le seul système français qui vous garantit le bon poids dès la première commande — ou on échange gratuitement."*
+**APRÈS SIRET :**
+10. Activer Shopify Payments
+11. Créer compte GMC
+12. Connecter domaine Shopify
 
 ---
 
-## 🔗 Liens opérationnels
-
-| Action | Lien |
-|--------|------|
-| Vérifier OEKO-TEX | https://www.oeko-tex.com/en/apply-here/oeko-tex-databases/label-check |
-| Créer micro-entreprise | https://autoentrepreneur.urssaf.fr |
-| Enregistrer domaine | https://www.ovh.com/fr/domaines/ |
-| Ouvrir Shopify | https://www.shopify.com/fr |
-| Google Merchant Center | https://merchants.google.com |
-| Dépôt marque INPI | https://www.inpi.fr/proteger-vos-creations/proteger-votre-marque |
-| Klaviyo | https://www.klaviyo.com |
-| Judge.me | https://judge.me |
-
----
-
-*Dépôt créé — Juin 2026 · Méthode Ecom Durability by Yass Fox*
-*Prochain objectif : 10 premières ventes avant fin M1*
+## RÈGLE D'OR
+> Aucun stock commandé avant : Shopify live + GMC validé + échantillon testé ≥ 16/20
