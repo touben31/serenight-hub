@@ -75,14 +75,14 @@ GitHub           : touben31/serenight-hub — 39 fichiers ✅
 | 2.10 | Page Retours | ✅ Publiée |
 | 2.11 | Page Confidentialité | ✅ Publiée |
 | 2.12 | Axeptio (cookies CNIL) | ⬜ App Store |
-| 2.13 | Produit Essential 6kg (79€) | ✅ Créé — ⬜ À activer |
-| 2.14 | Produit Classic 8kg (109€) | ✅ Créé — ⬜ À activer |
-| 2.15 | Produit Premium 10kg (129€) | ✅ Créé — ⬜ À activer |
+| 2.13 | Produit Essential 6kg (79€) | ✅ Créé + Actif |
+| 2.14 | Produit Classic 8kg (109€) | ✅ Créé + Actif |
+| 2.15 | Produit Premium 10kg (129€) | ✅ Créé + Actif |
 | 2.16 | Photos produits | 🔴 Attend échantillons |
 | 2.17 | Homepage Dawn (10 sections) | ⬜ Copy prêt dans homepage-finale.md |
-| 2.18 | Page quiz | ⬜ HTML prêt dans quiz-serenight.md |
-| 2.19 | Menu navigation | ⬜ |
-| 2.20 | Footer (liens légaux) | ⬜ |
+| 2.18 | Page quiz | ✅ Publiée /pages/quiz-trouver-mon-poids-parfait |
+| 2.19 | Menu navigation | ✅ Créé (3 liens) |
+| 2.20 | Footer (liens légaux) | ✅ Créé (CGV, ML, Retours, RGPD) |
 | 2.21 | App Google & YouTube | ⬜ App Store |
 | 2.22 | Klaviyo | ⬜ App Store |
 | 2.23 | Judge.me (avis) | ⬜ App Store |
