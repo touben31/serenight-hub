@@ -1,0 +1,20 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
+
+# Données sensibles — NE JAMAIS COMMITTER
+*.env
+secrets.txt
+api-keys.txt
+passwords.txt
+credentials.json
+
+# Dossiers locaux
+node_modules/
+.vscode/
