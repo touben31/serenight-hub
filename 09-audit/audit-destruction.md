@@ -1,5 +1,10 @@
 # ☠️ Audit de Destruction — Serenight
 
+
+> ⚠️ **Version initiale — Supersédée.**
+> Ce fichier est la première ébauche de l'audit.
+> Voir `module1-audit-destruction-complet.md` pour la version complète (3× plus détaillée).
+
 > *"Je joue le rôle d'un investisseur qui cherche à détruire le projet."*  
 > 10 catégories de risques · Probabilités · Impacts financiers · Plans de prévention
 
