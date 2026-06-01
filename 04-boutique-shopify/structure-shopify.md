@@ -69,8 +69,8 @@ Barre horizontale avec 4 icônes :
 
 | Stat | Source | Formulation |
 |------|--------|-------------|
-| 81% améliorent leur sommeil | Journal of Sleep Medicine | "81% de nos clients constatent une amélioration dès la première semaine" |
-| La pression profonde réduit le cortisol de 18% | Temple University 2021 | "Prouvé : réduit le stress physiologique" |
+| Des études montrent une amélioration du sommeil chez la majorité des utilisateurs | Journal of Sleep Medicine | "La majorité de nos clients rapportent un meilleur confort nocturne" |
+| Des études sur la pression profonde montrent un effet sur les marqueurs de stress | Temple University 2021 | "Conçue pour favoriser la relaxation physique" |
 | OEKO-TEX garantit 0 substance nocive | OEKO-TEX Standard 100 | "Certifiée sans substance nocive — pour toute la famille" |
 
 ### Section 6 — Garantie 30 nuits
@@ -93,7 +93,7 @@ Texte : "Nous sommes tellement convaincus que vous allez mieux dormir que nous v
 |----------|----------------|
 | Quel poids choisir ? | 7 à 10% de votre poids corporel. Notre quiz vous guide en 30 secondes. |
 | Puis-je la laver en machine ? | Oui, à 30° cycle délicat. |
-| Combien de temps pour voir des résultats ? | La plupart constatent une amélioration dès la première nuit. 81% en 7 jours. |
+| Combien de temps pour voir des résultats ? | Les résultats varient selon les personnes. La majorité de nos clients rapportent une amélioration progressive de leur confort nocturne. |
 | Est-ce dangereux pour les enfants ? | Nos Kids 4kg sont certifiées pour enfants 6-12 ans. Consultez un médecin pour les plus jeunes. |
 | Livraison et retours ? | Livraison offerte dès 79€. Retour gratuit sous 30 nuits. |
 
