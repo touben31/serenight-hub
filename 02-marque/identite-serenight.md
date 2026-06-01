@@ -38,7 +38,7 @@ Serenight est née d'une certitude : le sommeil n'est pas une pause dans la vie,
 
 **Promesse :** *Votre première nuit Serenight sera différente de toutes les autres.*
 
-**USP :** Serenight est la seule marque française à intégrer un guide de sommeil personnalisé par morphologie (poids/taille) et profil de stress avec chaque commande — éliminant le risque d'erreur et garantissant le résultat dès la première nuit.
+**USP :** Serenight est la seule marque française à intégrer un guide de sommeil personnalisé par morphologie (poids/taille) et profil de stress avec chaque commande — éliminant le risque de mauvais choix et accompagnant chaque client vers un sommeil plus serein.
 
 ---
 
