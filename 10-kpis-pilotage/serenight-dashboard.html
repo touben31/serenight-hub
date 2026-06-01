@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenight — Finance & Performance</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0f1e;--card:#111827;--card2:#1a2236;
+  --blue:#3b82f6;--green:#10b981;--red:#ef4444;--amber:#f59e0b;
+  --text:#e2e8f0;--muted:#64748b;--border:#1e2d45;
+}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:100vh}
+.header{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%);padding:18px 24px;border-bottom:1px solid var(--border)}
+.h-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.h-title{display:flex;align-items:center;gap:10px}
+.h-title h1{font-size:20px;font-weight:600;color:#fff;margin:0}
+.h-date{font-size:12px;color:var(--muted);background:#111827;padding:4px 10px;border-radius:6px;border:1px solid var(--border)}
+.tabs{display:flex;overflow-x:auto;background:#0d1526;border-bottom:1px solid var(--border);padding:0 16px;gap:2px}
+.tab{padding:12px 18px;border:none;background:none;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:all .15s}
+.tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab:hover:not(.active){color:var(--text)}
+.tab i{font-size:15px}
+.body{padding:20px 24px;max-width:1400px;margin:0 auto}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.kpi-val{font-size:24px;font-weight:700;line-height:1}
+.kpi-sub{font-size:11px;color:var(--muted);margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--card2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:500;padding:10px 12px;text-align:right;white-space:nowrap}
+th:first-child{text-align:left}
+td{padding:9px 12px;text-align:right;border-bottom:1px solid #0d1929}
+td:first-child{text-align:left}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#0c1528}
+.total-row td{background:var(--card2);font-weight:700;border-top:1px solid var(--border)}
+.btn{padding:7px 15px;border:1px solid var(--border);background:none;color:var(--text);border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.btn:hover{background:var(--card2);border-color:var(--blue)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-primary:hover{background:#2563eb}
+.btn-danger{color:var(--red);border-color:#3d1515}
+.btn-danger:hover{background:#200a0a}
+.btn-sm{padding:4px 9px;font-size:12px;border-radius:5px}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.badge-green{background:#052e16;color:#34d399}
+.badge-amber{background:#2d1f00;color:#fbbf24}
+.badge-red{background:#2d0a0a;color:#f87171}
+.badge-gray{background:var(--card2);color:var(--muted)}
+.inp{padding:6px 10px;background:#090e1d;border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:13px;width:100%}
+.inp:focus{outline:none;border-color:var(--blue)}
+.fixed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-bottom:16px}
+.fixed-item{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;gap:12px}
+.fixed-item label{font-size:13px;flex:1;cursor:default}
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px}
+.chart-title{font-size:13px;color:var(--muted);margin-bottom:14px;font-weight:500}
+.summary-bar{display:flex;flex-wrap:wrap;gap:16px;padding:14px 18px;background:var(--card2);border-radius:8px;margin-top:14px;font-size:13px}
+.summary-bar span{color:var(--muted);margin-right:4px}
+.add-form{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;align-items:end}
+.form-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-bottom:10px;flex-wrap:wrap}
+.legend-dot{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:4px}
+.section-title{font-size:15px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.export-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px}
+.export-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center}
+.export-icon{font-size:28px;margin-bottom:8px}
+.shopify-code{background:#090e1d;border-radius:6px;padding:14px;font-family:monospace;font-size:12px;color:#a3c4f7;line-height:1.8;margin:10px 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner{animation:spin 1s linear infinite}
+@media(max-width:700px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .tab span{display:none}
+  .tab i{font-size:18px}
+  .body{padding:14px 16px}
+  .mhide{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="h-row">
+    <div class="h-title">
+      <i class="ti ti-moon" style="font-size:22px;color:var(--blue)" aria-hidden="true"></i>
+      <div>
+        <h1>Finance & Performance</h1>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Serenight · Tableau de bord financier</div>
+      </div>
+    </div>
+    <div class="h-date" id="date-display">…</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" data-tab="dashboard"><i class="ti ti-layout-dashboard" aria-hidden="true"></i><span> Dashboard</span></button>
+  <button class="tab" data-tab="journal"><i class="ti ti-calendar-stats" aria-hidden="true"></i><span> Journal</span></button>
+  <button class="tab" data-tab="fixed"><i class="ti ti-receipt" aria-hidden="true"></i><span> Frais fixes</span></button>
+  <button class="tab" data-tab="charts"><i class="ti ti-chart-area-line" aria-hidden="true"></i><span> Graphiques</span></button>
+  <button class="tab" data-tab="export"><i class="ti ti-upload" aria-hidden="true"></i><span> Export</span></button>
+</div>
+
+<div class="body">
+  <div id="content" style="text-align:center;padding:3rem 0">
+    <i class="ti ti-loader spinner" style="font-size:28px;color:var(--muted)" aria-hidden="true"></i>
+    <p style="margin-top:10px;color:var(--muted)">Chargement…</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+/* ===== STATE ===== */
+let entries=[], fixed={}, charts={}, editId=null, showAdd=false, curTab='dashboard';
+
+const FD={shopify:29,domaine:2,apps:14,openai:0,claude:0,mistral:0,hebergement:0,email_marketing:0,outils_seo:0,outils_ia:0,remboursements:0,chargebacks:0,frais_bancaires:0,divers:0};
+const FL={shopify:'Shopify Basic',domaine:'Domaine',apps:'Applications',openai:'OpenAI',claude:'Claude',mistral:'Mistral',hebergement:'Hébergement',email_marketing:'Email marketing',outils_seo:'Outils SEO',outils_ia:'Outils IA',remboursements:'Remboursements',chargebacks:'Chargebacks',frais_bancaires:'Frais bancaires',divers:'Divers'};
+
+/* ===== SAMPLE DATA ===== */
+function sampleData(){
+  const t=new Date(), sc=[[0,10,0,0],[0,10,0,0],[0,10,0,0],[0,10,0,0],[0,10,0,0],[89,10,36,1],[0,10,0,0],[89,10,36,1],[178,15,72,2],[89,15,36,1],[267,25,109,3],[178,25,72,2],[356,25,145,4],[0,25,0,0]];
+  return sc.map(([ca,ads,produits,commandes],i)=>{const d=new Date(t);d.setDate(d.getDate()-(13-i));const date=d.toISOString().split('T')[0];return{id:date,date,ca,ads,produits,commandes};});
+}
+
+/* ===== CALC ===== */
+function cr(r){const ca=+r.ca||0,ads=+r.ads||0,p=+r.produits||0;return{...r,ca,ads,produits:p,roas:ads>0?ca/ads:null,mn:ca-ads-p,mp:ca>0?((ca-ads-p)/ca)*100:null};}
+function sumFixed(){return Object.values(fixed).reduce((a,v)=>a+(+v||0),0);}
+function getStats(){
+  const rows=entries.map(cr),l30=rows.slice(-30),l7=rows.slice(-7),tod=rows[rows.length-1];
+  const sum=(a,k)=>a.reduce((s,r)=>s+(r[k]||0),0);
+  const ca30=sum(l30,'ca'),ads30=sum(l30,'ads'),p30=sum(l30,'produits'),c30=sum(l30,'commandes'),ca7=sum(l7,'ca'),sf=sumFixed();
+  const brut=ca30-ads30-p30,net=brut-sf;
+  return{caT:tod?.ca||0,ca7,ca30,ads30,p30,c30,brut,net,sf,roas:ads30>0?ca30/ads30:0,pan:c30>0?ca30/c30:0,mg:ca30>0?(net/ca30)*100:0,rows};
+}
+
+/* ===== FORMAT ===== */
+const fe=(n,d=0)=>{if(n===null||n===undefined||isNaN(n))return'—';const s=Math.abs(n).toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});return(n<0?'-':'')+s+'€';};
+const fn=(n)=>isNaN(n)?'—':Math.round(+n).toLocaleString('fr-FR');
+const fp=(n)=>n===null||n===undefined?'—':Math.round(n)+'%';
+const fx=(n)=>n===null?'—':(+n).toFixed(2)+'×';
+
+/* ===== COLOR ===== */
+const rc=(r)=>r===null?'var(--muted)':r>=3?'#10b981':r>=2?'#f59e0b':'#ef4444';
+const mc=(m)=>m===null?'var(--muted)':m>=40?'#10b981':m>=20?'#f59e0b':'#ef4444';
+const nc=(n)=>(+n||0)>=0?'#10b981':'#ef4444';
+const rb=(r)=>r===null?'badge-gray':r>=3?'badge-green':r>=2?'badge-amber':'badge-red';
+const mb=(m)=>m===null?'badge-gray':m>=40?'badge-green':m>=20?'badge-amber':'badge-red';
+
+/* ===== STORAGE ===== */
+async function sv(){try{await window.storage.set('srn3-e',JSON.stringify(entries));}catch{}}
+async function sf2(){try{await window.storage.set('srn3-f',JSON.stringify(fixed));}catch{}}
+
+/* ===== RENDERS ===== */
+function renderDashboard(){
+  const s=getStats(),isDk=matchMedia('(prefers-color-scheme: dark)').matches;
+  const kRow=(arr)=>arr.map(k=>`<div class="card"><div class="kpi-label">${k.l}</div><div class="kpi-val" style="color:${k.c}">${k.v}</div><div class="kpi-sub">${k.s}</div></div>`).join('');
+  const k1=[
+    {l:"CA aujourd'hui",v:fe(s.caT),c:'var(--blue)',s:`${entries[entries.length-1]?.commandes||0} commandes`},
+    {l:'CA 7 jours',v:fe(s.ca7),c:'var(--blue)',s:`${s.rows.slice(-7).reduce((a,r)=>a+(r.commandes||0),0)} commandes`},
+    {l:'CA 30 jours',v:fe(s.ca30),c:'var(--blue)',s:`${s.c30} commandes`},
+    {l:'Commandes 30j',v:fn(s.c30),c:'var(--text)',s:'Panier moyen: '+fe(Math.round(s.pan))},
+  ];
+  const k2=[
+    {l:'ROAS moyen 30j',v:s.roas>0?fx(s.roas):'—',c:rc(s.roas),s:'Budget Ads: '+fe(Math.round(s.ads30))},
+    {l:'Bénéfice brut 30j',v:fe(Math.round(s.brut)),c:nc(s.brut),s:'CA – Ads – Produits'},
+    {l:'Frais fixes/mois',v:fe(s.sf),c:'var(--amber)',s:'Shopify, apps, domaine…'},
+    {l:'Bénéfice net 30j',v:fe(Math.round(s.net)),c:nc(s.net),s:'Marge: '+fp(s.mg)},
+  ];
+  return`<div class="g4">${kRow(k1)}</div><div class="g4">${kRow(k2)}</div>
+  <div class="chart-wrap" style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div class="chart-title" style="margin:0">CA & Bénéfice net — 30 jours</div>
+      <div class="legend"><span><span class="legend-dot" style="background:var(--blue)"></span>CA</span><span><span class="legend-dot" style="background:var(--green)"></span>Bénéfice net</span></div>
+    </div>
+    <div style="position:relative;height:180px"><canvas id="d-chart" role="img" aria-label="Graphique CA et bénéfice net 30 jours">Données financières Serenight.</canvas></div>
+  </div>
+  <div class="card">
+    <div class="chart-title">Produits — rentabilité théorique</div>
+    <table><thead><tr><th>Produit</th><th>Prix</th><th>Marge brute</th><th>Marge %</th><th>CPA max</th></tr></thead><tbody>
+    <tr><td><strong>Classic 8kg</strong> <span class="badge badge-green">Phare</span></td><td>89€</td><td style="color:var(--green)">41–47€</td><td style="color:var(--green)">46–53%</td><td style="color:var(--amber)">35–41€</td></tr>
+    <tr><td>Essential 6kg</td><td>79€</td><td style="color:var(--green)">33–39€</td><td style="color:var(--green)">42–50%</td><td style="color:var(--amber)">28–35€</td></tr>
+    <tr><td>Kids 4kg</td><td>59€</td><td style="color:var(--green)">22–26€</td><td style="color:var(--green)">37–44%</td><td style="color:var(--amber)">20–24€</td></tr>
+    </tbody></table>
+  </div>`;
+}
+
+function initDChart(){
+  const s=getStats(),isDk=matchMedia('(prefers-color-scheme: dark)').matches;
+  const gc=isDk?'rgba(255,255,255,.06)':'rgba(0,0,0,.05)',tc=isDk?'#9CA3AF':'#6B7280';
+  const rows=s.rows.slice(-30),lbl=rows.map(r=>r.date.slice(5));
+  const ctx=document.getElementById('d-chart');if(!ctx)return;
+  charts.d=new Chart(ctx,{type:'line',data:{labels:lbl,datasets:[
+    {label:'CA',data:rows.map(r=>r.ca||0),borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,.08)',fill:true,tension:.4,pointRadius:3},
+    {label:'Bénéfice net',data:rows.map(r=>Math.round(r.mn||0)),borderColor:'#10b981',backgroundColor:'rgba(16,185,129,.06)',fill:true,tension:.4,pointRadius:3,borderDash:[4,2]},
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y+'€'}}},scales:{x:{grid:{color:gc},ticks:{color:tc,font:{size:11},maxTicksLimit:8}},y:{grid:{color:gc},ticks:{color:tc,font:{size:11},callback:v=>v+'€'}}}}});
+}
+
+function renderJournal(){
+  const s=getStats(),rows=[...s.rows].reverse();
+  const af=showAdd?`<div class="add-form">
+    <div><div class="form-label">Date</div><input class="inp" type="date" id="a-d" value="${new Date().toISOString().split('T')[0]}"></div>
+    <div><div class="form-label">CA (€)</div><input class="inp" type="number" id="a-c" placeholder="89" min="0"></div>
+    <div><div class="form-label">Ads (€)</div><input class="inp" type="number" id="a-a" placeholder="10" min="0"></div>
+    <div><div class="form-label">Produits (€)</div><input class="inp" type="number" id="a-p" placeholder="36" min="0"></div>
+    <div><div class="form-label">Commandes</div><input class="inp" type="number" id="a-n" placeholder="1" min="0"></div>
+    <div style="padding-top:20px;display:flex;gap:6px">
+      <button class="btn btn-primary btn-sm" onclick="saveAdd()"><i class="ti ti-check" aria-hidden="true"></i> OK</button>
+      <button class="btn btn-sm" onclick="cancelAdd()"><i class="ti ti-x" aria-hidden="true"></i></button>
+    </div>
+  </div>`:'';
+  const trs=rows.map(r=>{
+    if(editId===r.id)return`<tr style="background:#0d1a2d">
+      <td><input class="inp" type="date" id="e-d" value="${r.date}" style="width:130px"></td>
+      <td><input class="inp" type="number" id="e-c" value="${r.ca}" style="width:75px;text-align:right"></td>
+      <td class="mhide"><input class="inp" type="number" id="e-a" value="${r.ads}" style="width:65px;text-align:right"></td>
+      <td class="mhide"><input class="inp" type="number" id="e-p" value="${r.produits}" style="width:75px;text-align:right"></td>
+      <td class="mhide"><input class="inp" type="number" id="e-n" value="${r.commandes}" style="width:55px;text-align:right"></td>
+      <td colspan="3" class="mhide" style="color:var(--muted);font-size:12px">Recalcul après sauvegarde</td>
+      <td style="text-align:right;white-space:nowrap">
+        <button class="btn btn-primary btn-sm" onclick="saveEdit('${r.id}')"><i class="ti ti-check" aria-hidden="true"></i></button>
+        <button class="btn btn-sm" onclick="cancelEdit()" style="margin-left:4px"><i class="ti ti-x" aria-hidden="true"></i></button>
+      </td></tr>`;
+    const c=cr(r),ds=new Date(r.date+'T00:00:00').toLocaleDateString('fr-FR',{day:'2-digit',month:'short'});
+    return`<tr>
+      <td>${ds}</td>
+      <td style="font-weight:600">${fe(c.ca)}</td>
+      <td class="mhide" style="color:var(--muted)">${fe(c.ads)}</td>
+      <td class="mhide" style="color:var(--muted)">${fe(c.produits)}</td>
+      <td class="mhide">${c.commandes||0}</td>
+      <td class="mhide"><span class="badge ${rb(c.roas)}">${fx(c.roas)}</span></td>
+      <td class="mhide" style="color:${nc(c.mn)};font-weight:600">${fe(Math.round(c.mn))}</td>
+      <td class="mhide"><span class="badge ${mb(c.mp)}">${fp(c.mp)}</span></td>
+      <td style="white-space:nowrap;text-align:right">
+        <button class="btn btn-sm" onclick="startEdit('${r.id}')" title="Modifier" aria-label="Modifier la ligne ${ds}"><i class="ti ti-pencil" aria-hidden="true"></i></button>
+        <button class="btn btn-danger btn-sm" onclick="delEntry('${r.id}')" title="Supprimer" aria-label="Supprimer la ligne ${ds}" style="margin-left:4px"><i class="ti ti-trash" aria-hidden="true"></i></button>
+      </td></tr>`;
+  }).join('');
+  const ca=entries.reduce((a,e)=>a+(+e.ca||0),0),ads=entries.reduce((a,e)=>a+(+e.ads||0),0),pr=entries.reduce((a,e)=>a+(+e.produits||0),0),cm=entries.reduce((a,e)=>a+(+e.commandes||0),0),br=ca-ads-pr,sf=sumFixed(),nt=br-sf,ro=ads>0?ca/ads:0;
+  return`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+    <div class="section-title" style="margin:0"><i class="ti ti-calendar-stats" aria-hidden="true"></i> Journal quotidien</div>
+    <button class="btn btn-primary" onclick="toggleAdd()"><i class="ti ti-plus" aria-hidden="true"></i> Ajouter</button>
+  </div>
+  ${af}
+  <div style="overflow-x:auto;border:1px solid var(--border);border-radius:10px">
+    <table><thead><tr>
+      <th style="text-align:left">Date</th><th>CA</th>
+      <th class="mhide">Ads</th><th class="mhide">Produits</th><th class="mhide">Cmds</th>
+      <th class="mhide">ROAS</th><th class="mhide">Marge nette</th><th class="mhide">Marge %</th>
+      <th>Actions</th>
+    </tr></thead><tbody>${trs}</tbody></table>
+  </div>
+  <div class="summary-bar">
+    <div><span>CA total:</span><strong>${fe(Math.round(ca))}</strong></div>
+    <div><span>Ads:</span><strong style="color:var(--amber)">${fe(Math.round(ads))}</strong></div>
+    <div><span>Produits:</span><strong>${fe(Math.round(pr))}</strong></div>
+    <div><span>Commandes:</span><strong>${cm}</strong></div>
+    <div><span>ROAS:</span><strong style="color:${rc(ro)}">${fx(ro)}</strong></div>
+    <div><span>Bénéfice brut:</span><strong style="color:${nc(br)}">${fe(Math.round(br))}</strong></div>
+    <div><span>Frais fixes:</span><strong style="color:var(--amber)">-${fe(sf)}</strong></div>
+    <div><span>Bénéfice net:</span><strong style="color:${nc(nt)};font-size:15px">${fe(Math.round(nt))}</strong></div>
+  </div>`;
+}
+
+function renderFixed(){
+  const tot=sumFixed();
+  return`<div class="section-title"><i class="ti ti-receipt" aria-hidden="true"></i> Frais fixes mensuels</div>
+  <div class="fixed-grid">${Object.entries(fixed).map(([k,v])=>`
+    <div class="fixed-item">
+      <label for="f-${k}">${FL[k]||k}</label>
+      <div style="display:flex;align-items:center;gap:6px">
+        <input class="inp" type="number" id="f-${k}" value="${v}" min="0" style="width:80px;text-align:right" onchange="updFixed('${k}',this.value)">
+        <span style="font-size:12px;color:var(--muted)">€/mois</span>
+      </div>
+    </div>`).join('')}
+  </div>
+  <div class="card" style="border-color:var(--amber)">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-weight:700">Total frais fixes</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px">Impact annuel: -${fe(tot*12)}</div>
+      </div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber)">${fe(tot)}/mois</div>
+    </div>
+  </div>`;
+}
+
+function renderCharts(){
+  return`<div class="section-title"><i class="ti ti-chart-area-line" aria-hidden="true"></i> Graphiques — 30 derniers jours</div>
+  ${[
+    {id:'c-ca',t:'Évolution du CA (€)',s:'Données CA Serenight'},
+    {id:'c-nt',t:'Évolution du bénéfice net (€)',s:'Données bénéfice net'},
+    {id:'c-ro',t:'Évolution du ROAS',s:'Données ROAS'},
+    {id:'c-cm',t:'Évolution des commandes',s:'Données commandes'},
+  ].map(c=>`<div class="chart-wrap"><div class="chart-title">${c.t}</div><div style="position:relative;height:190px"><canvas id="${c.id}" role="img" aria-label="${c.s}">${c.s}.</canvas></div></div>`).join('')}`;
+}
+
+function initAllCharts(){
+  const isDk=matchMedia('(prefers-color-scheme: dark)').matches,gc=isDk?'rgba(255,255,255,.06)':'rgba(0,0,0,.05)',tc=isDk?'#9CA3AF':'#6B7280';
+  const rows=entries.slice(-30).map(cr),lbl=rows.map(r=>r.date.slice(5));
+  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gc},ticks:{color:tc,font:{size:11},maxTicksLimit:8}},y:{grid:{color:gc},ticks:{color:tc,font:{size:11}}}}};
+  const mkL=(id,data,color,dsh=[],cb=v=>v+'€')=>{const ctx=document.getElementById(id);if(!ctx)return;charts[id]=new Chart(ctx,{type:'line',data:{labels:lbl,datasets:[{data,borderColor:color,backgroundColor:color+'18',fill:true,tension:.4,pointRadius:3,borderDash:dsh}]},options:{...base,scales:{...base.scales,y:{...base.scales.y,ticks:{...base.scales.y.ticks,callback:cb}}}}});};
+  const mkB=(id,data,color)=>{const ctx=document.getElementById(id);if(!ctx)return;charts[id]=new Chart(ctx,{type:'bar',data:{labels:lbl,datasets:[{data,backgroundColor:color+'AA',borderColor:color,borderWidth:1,borderRadius:3}]},options:base});};
+  mkL('c-ca',rows.map(r=>r.ca||0),'#3b82f6');
+  mkL('c-nt',rows.map(r=>Math.round(r.mn||0)),'#10b981',[4,2]);
+  mkL('c-ro',rows.map(r=>r.roas?Math.round(r.roas*100)/100:0),'#f59e0b',[],v=>v+'×');
+  mkB('c-cm',rows.map(r=>r.commandes||0),'#3b82f6');
+}
+
+function renderExport(){
+  return`<div class="section-title"><i class="ti ti-upload" aria-hidden="true"></i> Export des données</div>
+  <div class="export-cards">
+    <div class="export-card">
+      <div class="export-icon" style="color:var(--green)"><i class="ti ti-file-spreadsheet" style="font-size:28px" aria-hidden="true"></i></div>
+      <div style="font-weight:600;margin-bottom:4px">Export CSV</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Google Sheets, Excel</div>
+      <button class="btn btn-primary" onclick="expCSV()" style="width:100%;justify-content:center"><i class="ti ti-download" aria-hidden="true"></i> CSV</button>
+    </div>
+    <div class="export-card">
+      <div class="export-icon" style="color:var(--blue)"><i class="ti ti-table" style="font-size:28px" aria-hidden="true"></i></div>
+      <div style="font-weight:600;margin-bottom:4px">Export Excel</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Fichier .xlsx — 2 onglets</div>
+      <button class="btn btn-primary" onclick="expXLSX()" style="width:100%;justify-content:center"><i class="ti ti-download" aria-hidden="true"></i> Excel</button>
+    </div>
+    <div class="export-card">
+      <div class="export-icon" style="color:#a78bfa"><i class="ti ti-printer" style="font-size:28px" aria-hidden="true"></i></div>
+      <div style="font-weight:600;margin-bottom:4px">Export PDF</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Via impression navigateur</div>
+      <button class="btn btn-primary" onclick="window.print()" style="width:100%;justify-content:center"><i class="ti ti-printer" aria-hidden="true"></i> PDF</button>
+    </div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600;margin-bottom:10px"><i class="ti ti-brand-shopify" aria-hidden="true"></i> Synchronisation Shopify</div>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:10px">Pour synchroniser automatiquement les ventes Shopify :</p>
+    <div class="shopify-code">Shopify Admin → Paramètres → Applications → Développer des apps<br>→ Créer une app → Autorisations API Admin<br>→ Scopes : <strong>read_orders</strong>, <strong>read_products</strong><br>→ Copier l'API Key + Access Token</div>
+    <div style="background:#2d1f00;border:1px solid var(--amber);border-radius:6px;padding:12px;font-size:12px;color:#fbbf24;margin-top:10px">
+      <i class="ti ti-bulb" aria-hidden="true"></i> <strong>Alternative simple :</strong> Shopify Admin → Analytique → Commandes → Exporter CSV → saisir les totaux ici manuellement chaque soir.
+    </div>
+    <div style="margin-top:14px">
+      <button class="btn" onclick="importCSV()" style="width:100%;justify-content:center"><i class="ti ti-file-import" aria-hidden="true"></i> Importer un CSV Shopify</button>
+      <input type="file" id="csv-input" accept=".csv" style="display:none" onchange="handleCSV(event)">
+    </div>
+  </div>`;
+}
+
+/* ===== ACTIONS ===== */
+function toggleAdd(){showAdd=!showAdd;renderTab(curTab);}
+function cancelAdd(){showAdd=false;renderTab(curTab);}
+function saveAdd(){
+  const date=document.getElementById('a-d')?.value;if(!date)return;
+  const e={id:date+'-'+Date.now(),date,ca:+document.getElementById('a-c')?.value||0,ads:+document.getElementById('a-a')?.value||0,produits:+document.getElementById('a-p')?.value||0,commandes:+document.getElementById('a-n')?.value||0};
+  const i=entries.findIndex(x=>x.date===date);
+  if(i>=0)entries[i]={...entries[i],...e};else entries.push(e);
+  entries.sort((a,b)=>a.date.localeCompare(b.date));
+  sv();showAdd=false;renderTab(curTab);
+}
+function startEdit(id){editId=id;renderTab(curTab);}
+function cancelEdit(){editId=null;renderTab(curTab);}
+function saveEdit(id){
+  const i=entries.findIndex(x=>x.id===id);if(i<0)return;
+  entries[i]={...entries[i],date:document.getElementById('e-d')?.value||entries[i].date,ca:+document.getElementById('e-c')?.value||0,ads:+document.getElementById('e-a')?.value||0,produits:+document.getElementById('e-p')?.value||0,commandes:+document.getElementById('e-n')?.value||0};
+  editId=null;sv();renderTab(curTab);
+}
+function delEntry(id){if(!confirm('Supprimer cette ligne ?'))return;entries=entries.filter(e=>e.id!==id);sv();renderTab(curTab);}
+function updFixed(k,v){fixed[k]=+v||0;sf2();}
+function importCSV(){document.getElementById('csv-input')?.click();}
+function handleCSV(ev){
+  const file=ev.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const lines=e.target.result.split('\n').slice(1);
+    lines.forEach(l=>{
+      const p=l.split(',');if(p.length<2)return;
+      const date=p[0]?.trim().replace(/"/g,'');if(!date||!/\d{4}-\d{2}-\d{2}/.test(date))return;
+      const ca=parseFloat(p[1])||0,ads=parseFloat(p[2])||0,produits=parseFloat(p[3])||0,commandes=parseInt(p[4])||0;
+      const i=entries.findIndex(x=>x.date===date);
+      const nt={id:date,date,ca,ads,produits,commandes};
+      if(i>=0)entries[i]=nt;else entries.push(nt);
+    });
+    entries.sort((a,b)=>a.date.localeCompare(b.date));sv();alert('Import terminé: '+lines.filter(l=>l.trim()).length+' lignes traitées.');renderTab(curTab);
+  };
+  reader.readAsText(file);
+}
+
+/* ===== EXPORTS ===== */
+function expCSV(){
+  const hdr=['Date','CA (€)','Ads (€)','Produits (€)','Commandes','ROAS','Marge nette (€)','Marge (%)'];
+  const rows=entries.map(e=>{const c=cr(e);return[e.date,c.ca||0,c.ads||0,c.produits||0,c.commandes||0,c.roas?c.roas.toFixed(2):'',Math.round(c.mn||0),c.mp?Math.round(c.mp):''].join(',');});
+  const csv='\uFEFF'+[hdr.join(','),...rows].join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
+  a.download='serenight-finance-'+new Date().toISOString().split('T')[0]+'.csv';a.click();
+}
+function expXLSX(){
+  if(!window.XLSX){alert('Librairie XLSX non chargée.');return;}
+  const data=entries.map(e=>{const c=cr(e);return{'Date':e.date,'CA (€)':c.ca||0,'Ads (€)':c.ads||0,'Produits (€)':c.produits||0,'Commandes':c.commandes||0,'ROAS':c.roas?Math.round(c.roas*100)/100:0,'Marge nette (€)':Math.round(c.mn||0),'Marge (%)':c.mp?Math.round(c.mp):0};});
+  const wb=XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(data),'Journal');
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(Object.entries(fixed).map(([k,v])=>({'Poste':FL[k]||k,'€/mois':+v||0}))),'Frais fixes');
+  XLSX.writeFile(wb,'serenight-finance-'+new Date().toISOString().split('T')[0]+'.xlsx');
+}
+
+/* ===== TAB ENGINE ===== */
+function renderTab(tab){
+  curTab=tab;editId=null;
+  Object.values(charts).forEach(c=>{try{c.destroy();}catch{}});charts={};
+  const el=document.getElementById('content');
+  switch(tab){
+    case'dashboard':el.innerHTML=renderDashboard();setTimeout(initDChart,60);break;
+    case'journal':el.innerHTML=renderJournal();break;
+    case'fixed':el.innerHTML=renderFixed();break;
+    case'charts':el.innerHTML=renderCharts();setTimeout(initAllCharts,60);break;
+    case'export':el.innerHTML=renderExport();break;
+  }
+}
+
+/* ===== INIT ===== */
+(async()=>{
+  try{const e=await window.storage.get('srn3-e');entries=e?.value?JSON.parse(e.value):sampleData();}catch{entries=sampleData();}
+  try{const f=await window.storage.get('srn3-f');fixed=f?.value?{...FD,...JSON.parse(f.value)}:{...FD};}catch{fixed={...FD};}
+  document.getElementById('date-display').textContent=new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');renderTab(btn.dataset.tab);
+    });
+  });
+  renderTab('dashboard');
+})();
+</script>
+</body>
+</html>
