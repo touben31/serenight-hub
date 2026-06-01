@@ -2,6 +2,16 @@
 
 > Données Semrush FR : 27 100 recherches/mois sur "couverture lestée" · CPC 0,36€
 
+> ⚠️ **Note CPC (corrigé — Juin 2026) :**
+> Le CPC 0,36€ est la **donnée Semrush brute** — pertinente pour l'analyse de marché.
+> En opérationnel, utiliser les valeurs corrigées :
+> - **M1 (nouveau compte) :** 0,65-0,75€ — Quality Score bas, pas d'historique
+> - **M2-M3 :** 0,40-0,55€ — progression avec le compte
+> - **M4+ :** proche de 0,36€ si compte bien géré
+>
+> Budgets et simulations dans `07-financier/simulation-financiere.md`.
+
+
 ---
 
 ## Structure des campagnes
@@ -84,7 +94,7 @@ Couverture Lestée Serenight 8kg | Bambou OEKO-TEX | Garantie 30 Nuits
 | Titre 3 | Garantie 30 Nuits \| Dès 79€ | Garantie + prix d'appel |
 | Titre 4 | Guide Sommeil Offert | Bonus valeur |
 | Titre 5 | Livraison Offerte en 48h | Logistique |
-| Description 1 | La couverture lestée bambou OEKO-TEX qui améliore votre sommeil dès la première nuit. Guide personnalisé inclus. Retour gratuit 30 jours. | Promesse + preuve + garantie |
+| Description 1 | La couverture lestée bambou OEKO-TEX conçue pour favoriser la relaxation et un sommeil plus serein. Quiz poids inclus. 30 nuits d'essai. | Promesse + preuve + garantie |
 | Description 2 | Billes de verre silencieuses. Poids personnalisé selon votre morphologie. Certifiée sans substance nocive. Rejoignez 2 800 dormeurs Serenight. | Différenciateurs + social proof |
 
 ---
